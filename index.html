@@ -11,6 +11,11 @@
             width: 400px; /* Ajustează dimensiunea după cum dorești */
             height: auto;
         }
+
+        /* Ascunde butonul */
+        #showMemeButton {
+            display: inline-block; /* Afișează butonul */
+        }
     </style>
 </head>
 <body>
@@ -18,15 +23,16 @@
     <p>Pe bune, cum ai ajuns aici?!</p>
 
     <!-- Butonul pe care utilizatorul trebuie să apese -->
-    <button onclick="showMeme()">Apasă aici pentru un meme</button>
+    <button id="showMemeButton" onclick="showMeme()">Apasă aici pentru un meme</button>
 
     <!-- GIF-ul care va fi afișat doar după ce butonul este apăsat -->
     <img id="meme" src="https://media1.tenor.com/m/_P5vPnr080YAAAAC/mr-bean-funny.gif" alt="Meme GIF">
 
     <script>
-        // Funcția care va afișa GIF-ul
+        // Funcția care va afișa GIF-ul și va ascunde butonul
         function showMeme() {
-            document.getElementById('meme').style.display = 'block'; // Schimbă stilul pentru a face imaginea vizibilă
+            document.getElementById('meme').style.display = 'block'; // Afișează imaginea
+            document.getElementById('showMemeButton').style.display = 'none'; // Ascunde butonul
         }
     </script>
 </body>
